@@ -1,5 +1,5 @@
 class Usuario {
-    constructor(nombre, apellido, libros, mascotas) {
+    constructor(nombre, apellido, libros = [], mascotas = []) {
         this.nombre = nombre
         this.apellido = apellido
         this.libros = libros
@@ -22,6 +22,7 @@ class Usuario {
     addBook(libroNombre, libroAutor) {
         this.libros.push({ nombre: libroNombre, autor: libroAutor })
         return this.libros
+        
     }
 
     getBookNames() {
